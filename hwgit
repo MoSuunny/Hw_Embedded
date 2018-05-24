@@ -1,0 +1,220 @@
+mohammad vali sanian 93101254
+in this homework some command has output that you can see it some command just change directory and some command just make afile ..
+
+------------------------------------
+1-sudo apt install git
+Reading package lists...
+Building dependency tree...
+Reading state information...
+git is already the newest version (1:2.11.0-2ubuntu0.3).
+The following packages were automatically installed and are no longer required:
+  libcuda1-375 linux-headers-4.10.0-37 linux-headers-4.10.0-37-generic
+  linux-headers-4.10.0-38 linux-headers-4.10.0-38-generic
+  linux-headers-4.10.0-40 linux-headers-4.10.0-40-generic
+  linux-image-4.10.0-37-generic linux-image-4.10.0-38-generic
+  linux-image-4.10.0-40-generic linux-image-4.8.0-59-generic
+  linux-image-extra-4.10.0-37-generic linux-image-extra-4.10.0-38-generic
+  linux-image-extra-4.10.0-40-generic linux-image-extra-4.8.0-59-generic
+  nvidia-opencl-icd-375
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 62 not upgraded.
+-------------------------
+2-cd ~/
+-----------
+3-git clone https://github.com/imangh/Class2018.git
+Cloning into Hw_Embedded...
+remote: Counting objects: 3, done.
+remote: Total 3 delta 0, reused 0 delta 0, pack-reused 0
+Unpacking objects: 100% 3/3, done.
+----------------
+4-cd Hw_Embedded
+---------------
+5- cd .git
+----------------
+6-more config | grep url
+url = https://github.com/mammad1/Hw_Embedded
+----------------
+7-cd ..
+------------
+9-git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	test1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+----------------
+10-echo "*.o" > .gitignore
+----------------
+11-more .gitignore
+*.o
+----------------
+12-git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.gitignore
+	test1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+----------------
+13-git init
+Reinitialized existing Git repository in /home/mohammad/Hw_Embedded/.git/
+----------------
+14-git add README.md
+---------------
+15-git commit -m "first commit"
+[master 8a7f99a] first commit
+1 file changed, 1 insertion(+)
+---------------
+16-git remote add origin git@github.com:/mammad1/Hw_Embedded
+remote origin already exists.
+----------------
+17-git push -u origin master
+Username for 'https://github.com': mammad1
+Password for 'https://mammad1@github.com': 
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 275 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/mammad1/Hw_Embedded
+   3018996..8a7f99a  master -> master
+Branch master set up to track remote branch master from origin.
+---------------------
+18-git add .
+add files to staging area
+---------------------
+19-git status
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   .gitignore
+	new file:   he
+	new file:   te
+	new file:   test1.txt
+--------------------------
+20-git config --global user.name "mammad1"
+-------------------
+21-git config --global user.email mvs2667@gmail.com
+-------------------
+22-git commit -m "First Time!"
+[master 2780622] First Time!
+ 4 files changed, 4 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 he
+ create mode 100644 te
+ create mode 100644 test1.txt
+--------------------
+23-git config --global push.default simple
+--------------------
+24-git push
+Username for 'https://github.com': mammad1
+Password for 'https://mammad1@github.com': 
+Counting objects: 6, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (6/6), 418 bytes | 0 bytes/s, done.
+Total 6 (delta 0), reused 0 (delta 0)
+To https://github.com/mammad1/Hw_Embedded
+   8a7f99a..2780622  master -> master
+-----------------
+25-git pull
+Already up-to-date.
+-----------------
+26-git commit -a -m "hello"
+[master f5a6c07] hello
+ 2 files changed, 2 deletions(-)
+ delete mode 100644 he
+ delete mode 100644 te
+-----------------
+27-git branch branch1
+-----------------
+28-git checkout branch1
+Switched to branch 'branch1'
+-----------------
+29-touch test2.txt
+-----------------
+30-ls
+README.md  test1.txt  test2.txt
+-----------------
+31-git status
+On branch branch1
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	test2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+-----------------
+32-git add .
+----------------
+33-git status
+On branch branch1
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   test2.txt
+------------------------
+34-git commit -m "Testing Commit to Branch=branch1!"
+[branch1 c216e35] Testing Commit to Branch=branch1!
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test2.txt
+----------------------
+35-git status
+On branch branch1
+nothing to commit, working tree clean
+----------------
+36-ls
+README.md  test1.txt  test2.txt
+--------------
+37-git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+--------------
+38-ls
+README.md  test1.txt
+--------------
+39-git checkout branch1
+Switched to branch 'branch1'
+--------------
+40-ls
+README.md  test1.txt  test2.txt
+---------------
+41-git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+-------------
+42- git merge branch1
+Updating f5a6c07..c216e35
+Fast-forward
+ test2.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test2.txt
+-------------
+43-ls
+README.md  test1.txt  test2.txt
+-------------
+44-git branch -d branch1
+Deleted branch branch1 (was c216e35).
+----------------
+45-ls
+README.md  rt  test1.txt  test2.txt
+------------------
+46-git help credentials
+a page with security information
+----------------
+47-git config --global credential.helper 'cache --timeout 7200'
+Don't ask user/pass for 2 hours!
+
+
+
+
+
+
+
+
