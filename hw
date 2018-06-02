@@ -1,0 +1,1072 @@
+1-lsusb
+Bus 001 Device 004: ID 1e4e:0102 Cubeternet GL-UPC822 UVC WebCam
+Bus 001 Device 003: ID 0424:ec00 Standard Microsystems Corp. SMSC9512/9514 Fast Ethernet Adapter
+Bus 001 Device 002: ID 0424:9514 Standard Microsystems Corp. SMC9514 Hub
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+---------------------
+2-lsusb -v | less
+Bus 001 Device 004: ID 1e4e:0102 Cubeternet GL-UPC822 UVC WebCam
+Couldn't open device, some information will be missing
+Device Descriptor:
+  bLength                18
+  bDescriptorType         1
+  bcdUSB               2.00
+  bDeviceClass          239 Miscellaneous Device
+  bDeviceSubClass         2 ?
+  bDeviceProtocol         1 Interface Association
+  bMaxPacketSize0        64
+  idVendor           0x1e4e Cubeternet
+  idProduct          0x0102 GL-UPC822 UVC WebCam
+  bcdDevice            2.01
+  iManufacturer           1 
+  iProduct                2 
+  iSerial                 0 
+  bNumConfigurations      1
+  Configuration Descriptor:
+    bLength                 9
+    bDescriptorType         2
+    wTotalLength          539
+    bNumInterfaces          2
+    bConfigurationValue     1
+    iConfiguration          0 
+    bmAttributes         0x80
+      (Bus Powered)
+    MaxPower              100mA
+    Interface Association:
+      bLength                 8
+      bDescriptorType        11
+      bFirstInterface         0
+      bInterfaceCount         2
+      bFunctionClass         14 Video
+      bFunctionSubClass       3 Video Interface Collection
+      bFunctionProtocol       0 
+      iFunction               2 
+    Interface Descriptor:
+      bLength                 9
+      bDescriptorType         4
+      bInterfaceNumber        0
+      bAlternateSetting       0
+      bNumEndpoints           1
+      bInterfaceClass        14 Video
+      bInterfaceSubClass      1 Video Control
+      bInterfaceProtocol      0 
+      iInterface              2 
+      VideoControl Interface Descriptor:
+        bLength                13
+        bDescriptorType        36
+        bDescriptorSubtype      1 (HEADER)
+        bcdUVC               1.00
+        wTotalLength           77
+        dwClockFrequency       30.000000MHz
+        bInCollection           1
+        baInterfaceNr( 0)       1
+      VideoControl Interface Descriptor:
+        bLength                18
+        bDescriptorType        36
+        bDescriptorSubtype      2 (INPUT_TERMINAL)
+        bTerminalID             1
+        wTerminalType      0x0201 Camera Sensor
+        bAssocTerminal          0
+        iTerminal               0 
+        wObjectiveFocalLengthMin      0
+        wObjectiveFocalLengthMax      0
+        wOcularFocalLength            0
+        bControlSize                  3
+        bmControls           0x0000000e
+          Auto-Exposure Mode
+          Auto-Exposure Priority
+          Exposure Time (Absolute)
+      VideoControl Interface Descriptor:
+        bLength                 9
+        bDescriptorType        36
+        bDescriptorSubtype      3 (OUTPUT_TERMINAL)
+        bTerminalID             2
+        wTerminalType      0x0101 USB Streaming
+        bAssocTerminal          0
+        bSourceID               4
+        iTerminal               0 
+      VideoControl Interface Descriptor:
+        bLength                11
+        bDescriptorType        36
+        bDescriptorSubtype      5 (PROCESSING_UNIT)
+      Warning: Descriptor too short
+        bUnitID                 3
+        bSourceID               1
+        wMaxMultiplier          0
+        bControlSize            2
+        bmControls     0x0000147f
+          Brightness
+          Contrast
+          Hue
+          Saturation
+          Sharpness
+          Gamma
+          White Balance Temperature
+          Power Line Frequency
+          White Balance Temperature, Auto
+        iProcessing             0 
+        bmVideoStandards     0x1a
+          NTSC - 525/60
+          SECAM - 625/50
+          NTSC - 625/50
+      VideoControl Interface Descriptor:
+        bLength                26
+        bDescriptorType        36
+        bDescriptorSubtype      6 (EXTENSION_UNIT)
+        bUnitID                 4
+        guidExtensionCode         {adccb1c2-f6ab-b848-8e37-32d4f3a3feec}
+        bNumControl             8
+        bNrPins                 1
+        baSourceID( 0)          3
+        bControlSize            1
+        bmControls( 0)       0x3f
+        iExtension              0 
+      Endpoint Descriptor:
+        bLength                 7
+        bDescriptorType         5
+        bEndpointAddress     0x82  EP 2 IN
+        bmAttributes            3
+          Transfer Type            Interrupt
+          Synch Type               None
+          Usage Type               Data
+        wMaxPacketSize     0x0040  1x 64 bytes
+        bInterval               8
+    Interface Descriptor:
+      bLength                 9
+      bDescriptorType         4
+      bInterfaceNumber        1
+      bAlternateSetting       0
+      bNumEndpoints           0
+      bInterfaceClass        14 Video
+      bInterfaceSubClass      2 Video Streaming
+      bInterfaceProtocol      0 
+      iInterface              0 
+      VideoStreaming Interface Descriptor:
+        bLength                            14
+        bDescriptorType                    36
+        bDescriptorSubtype                  1 (INPUT_HEADER)
+        bNumFormats                         1
+        wTotalLength                      223
+        bEndPointAddress                  129
+        bmInfo                              0
+        bTerminalLink                       2
+        bStillCaptureMethod                 2
+        bTriggerSupport                     1
+        bTriggerUsage                       1
+        bControlSize                        1
+        bmaControls( 0)                    27
+      VideoStreaming Interface Descriptor:
+        bLength                            27
+        bDescriptorType                    36
+        bDescriptorSubtype                  4 (FORMAT_UNCOMPRESSED)
+        bFormatIndex                        1
+        bNumFrameDescriptors                5
+        guidFormat                            {59555932-0000-1000-8000-00aa00389b71}
+        bBitsPerPixel                      16
+        bDefaultFrameIndex                  1
+        bAspectRatioX                       0
+        bAspectRatioY                       0
+        bmInterlaceFlags                 0x00
+          Interlaced stream or variable: No
+          Fields per frame: 2 fields
+          Field 1 first: No
+          Field pattern: Field 1 only
+          bCopyProtect                      0
+      VideoStreaming Interface Descriptor:
+        bLength                            30
+        bDescriptorType                    36
+        bDescriptorSubtype                  5 (FRAME_UNCOMPRESSED)
+        bFrameIndex                         1
+        bmCapabilities                   0x00
+          Still image unsupported
+        wWidth                            640
+        wHeight                           480
+        dwMinBitRate                147456000
+        dwMaxBitRate                147456000
+        dwMaxVideoFrameBufferSize      614400
+        dwDefaultFrameInterval         333333
+        bFrameIntervalType                  1
+        dwFrameInterval( 0)            333333
+      VideoStreaming Interface Descriptor:
+        bLength                            30
+        bDescriptorType                    36
+        bDescriptorSubtype                  5 (FRAME_UNCOMPRESSED)
+        bFrameIndex                         2
+        bmCapabilities                   0x00
+          Still image unsupported
+        wWidth                            352
+        wHeight                           288
+        dwMinBitRate                 48660480
+        dwMaxBitRate                 48660480
+        dwMaxVideoFrameBufferSize      202752
+        dwDefaultFrameInterval         333333
+        bFrameIntervalType                  1
+        dwFrameInterval( 0)            333333
+      VideoStreaming Interface Descriptor:
+        bLength                            30
+        bDescriptorType                    36
+        bDescriptorSubtype                  5 (FRAME_UNCOMPRESSED)
+        bFrameIndex                         3
+        bmCapabilities                   0x00
+          Still image unsupported
+        wWidth                            320
+        wHeight                           240
+        dwMinBitRate                 36864000
+        dwMaxBitRate                 36864000
+        dwMaxVideoFrameBufferSize      153600
+        dwDefaultFrameInterval         333333
+        bFrameIntervalType                  1
+        dwFrameInterval( 0)            333333
+      VideoStreaming Interface Descriptor:
+        bLength                            30
+        bDescriptorType                    36
+        bDescriptorSubtype                  5 (FRAME_UNCOMPRESSED)
+        bFrameIndex                         4
+        bmCapabilities                   0x00
+          Still image unsupported
+        wWidth                            176
+        wHeight                           144
+        dwMinBitRate                 12165120
+        dwMaxBitRate                 12165120
+        dwMaxVideoFrameBufferSize       50688
+        dwDefaultFrameInterval         333333
+        bFrameIntervalType                  1
+        dwFrameInterval( 0)            333333
+      VideoStreaming Interface Descriptor:
+        bLength                            30
+        bDescriptorType                    36
+        bDescriptorSubtype                  5 (FRAME_UNCOMPRESSED)
+        bFrameIndex                         5
+        bmCapabilities                   0x00
+          Still image unsupported
+        wWidth                            160
+        wHeight                           120
+        dwMinBitRate                  9216000
+        dwMaxBitRate                  9216000
+        dwMaxVideoFrameBufferSize       38400
+        dwDefaultFrameInterval         333333
+        bFrameIntervalType                  1
+        dwFrameInterval( 0)            333333
+      VideoStreaming Interface Descriptor:
+        bLength                            26
+        bDescriptorType                    36
+        bDescriptorSubtype                  3 (STILL_IMAGE_FRAME)
+        bEndpointAddress                    0
+        bNumImageSizePatterns               5
+        wWidth( 0)                        640
+        wHeight( 0)                       480
+        wWidth( 1)                        352
+        wHeight( 1)                       288
+        wWidth( 2)                        320
+        wHeight( 2)                       240
+        wWidth( 3)                        176
+        wHeight( 3)                       144
+        wWidth( 4)                        160
+        wHeight( 4)                       120
+        bNumCompressionPatterns             5
+      VideoStreaming Interface Descriptor:
+        bLength                             6
+        bDescriptorType                    36
+        bDescriptorSubtype                 13 (COLORFORMAT)
+        bColorPrimaries                     1 (BT.709,sRGB)
+        bTransferCharacteristics            1 (BT.709)
+        bMatrixCoefficients                 4 (SMPTE 170M (BT.601))
+    Interface Descriptor:
+      bLength                 9
+      bDescriptorType         4
+      bInterfaceNumber        1
+      bAlternateSetting       1
+      bNumEndpoints           1
+      bInterfaceClass        14 Video
+      bInterfaceSubClass      2 Video Streaming
+      bInterfaceProtocol      0 
+      iInterface              0 
+      Endpoint Descriptor:
+        bLength                 7
+        bDescriptorType         5
+        bEndpointAddress     0x81  EP 1 IN
+        bmAttributes            5
+          Transfer Type            Isochronous
+          Synch Type               Asynchronous
+          Usage Type               Data
+        wMaxPacketSize     0x00a0  1x 160 bytes
+        bInterval               1
+    Interface Descriptor:
+      bLength                 9
+      bDescriptorType         4
+      bInterfaceNumber        1
+      bAlternateSetting       2
+      bNumEndpoints           1
+      bInterfaceClass        14 Video
+      bInterfaceSubClass      2 Video Streaming
+      bInterfaceProtocol      0 
+      iInterface              0 
+      Endpoint Descriptor:
+        bLength                 7
+        bDescriptorType         5
+        bEndpointAddress     0x81  EP 1 IN
+        bmAttributes            5
+          Transfer Type            Isochronous
+          Synch Type               Asynchronous
+          Usage Type               Data
+        wMaxPacketSize     0x00d0  1x 208 bytes
+        bInterval               1
+    Interface Descriptor:
+      bLength                 9
+      bDescriptorType         4
+      bInterfaceNumber        1
+      bAlternateSetting       3
+      bNumEndpoints           1
+      bInterfaceClass        14 Video
+      bInterfaceSubClass      2 Video Streaming
+      bInterfaceProtocol      0 
+      iInterface              0 
+      Endpoint Descriptor:
+        bLength                 7
+        bDescriptorType         5
+        bEndpointAddress     0x81  EP 1 IN
+        bmAttributes            5
+          Transfer Type            Isochronous
+          Synch Type               Asynchronous
+          Usage Type               Data
+        wMaxPacketSize     0x0300  1x 768 bytes
+        bInterval               1
+    Interface Descriptor:
+      bLength                 9
+      bDescriptorType         4
+      bInterfaceNumber        1
+      bAlternateSetting       4
+      bNumEndpoints           1
+      bInterfaceClass        14 Video
+      bInterfaceSubClass      2 Video Streaming
+      bInterfaceProtocol      0 
+      iInterface              0 
+      Endpoint Descriptor:
+        bLength                 7
+        bDescriptorType         5
+        bEndpointAddress     0x81  EP 1 IN
+        bmAttributes            5
+          Transfer Type            Isochronous
+          Synch Type               Asynchronous
+          Usage Type               Data
+        wMaxPacketSize     0x030c  1x 780 bytes
+        bInterval               1
+    Interface Descriptor:
+      bLength                 9
+      bDescriptorType         4
+      bInterfaceNumber        1
+      bAlternateSetting       5
+      bNumEndpoints           1
+      bInterfaceClass        14 Video
+      bInterfaceSubClass      2 Video Streaming
+      bInterfaceProtocol      0 
+      iInterface              0 
+      Endpoint Descriptor:
+        bLength                 7
+        bDescriptorType         5
+        bEndpointAddress     0x81  EP 1 IN
+        bmAttributes            5
+          Transfer Type            Isochronous
+          Synch Type               Asynchronous
+          Usage Type               Data
+        wMaxPacketSize     0x032c  1x 812 bytes
+        bInterval               1
+    Interface Descriptor:
+      bLength                 9
+      bDescriptorType         4
+      bInterfaceNumber        1
+      bAlternateSetting       6
+      bNumEndpoints           1
+      bInterfaceClass        14 Video
+      bInterfaceSubClass      2 Video Streaming
+      bInterfaceProtocol      0 
+      iInterface              0 
+      Endpoint Descriptor:
+        bLength                 7
+        bDescriptorType         5
+        bEndpointAddress     0x81  EP 1 IN
+        bmAttributes            5
+          Transfer Type            Isochronous
+          Synch Type               Asynchronous
+          Usage Type               Data
+        wMaxPacketSize     0x03d0  1x 976 bytes
+        bInterval               1
+    Interface Descriptor:
+      bLength                 9
+      bDescriptorType         4
+      bInterfaceNumber        1
+      bAlternateSetting       7
+      bNumEndpoints           1
+      bInterfaceClass        14 Video
+      bInterfaceSubClass      2 Video Streaming
+      bInterfaceProtocol      0 
+      iInterface              0 
+      Endpoint Descriptor:
+        bLength                 7
+        bDescriptorType         5
+        bEndpointAddress     0x81  EP 1 IN
+        bmAttributes            5
+          Transfer Type            Isochronous
+          Synch Type               Asynchronous
+          Usage Type               Data
+        wMaxPacketSize     0x03fc  1x 1020 bytes
+        bInterval               1
+    Interface Descriptor:
+      bLength                 9
+      bDescriptorType         4
+      bInterfaceNumber        1
+      bAlternateSetting       8
+      bNumEndpoints           1
+      bInterfaceClass        14 Video
+      bInterfaceSubClass      2 Video Streaming
+      bInterfaceProtocol      0 
+      iInterface              0 
+      Endpoint Descriptor:
+        bLength                 7
+        bDescriptorType         5
+        bEndpointAddress     0x81  EP 1 IN
+        bmAttributes            5
+          Transfer Type            Isochronous
+          Synch Type               Asynchronous
+          Usage Type               Data
+        wMaxPacketSize     0x0400  1x 1024 bytes
+        bInterval               1
+    Interface Descriptor:
+      bLength                 9
+      bDescriptorType         4
+      bInterfaceNumber        1
+      bAlternateSetting       9
+      bNumEndpoints           1
+      bInterfaceClass        14 Video
+      bInterfaceSubClass      2 Video Streaming
+      bInterfaceProtocol      0 
+      iInterface              0 
+      Endpoint Descriptor:
+        bLength                 7
+        bDescriptorType         5
+        bEndpointAddress     0x81  EP 1 IN
+        bmAttributes            5
+          Transfer Type            Isochronous
+          Synch Type               Asynchronous
+          Usage Type               Data
+        wMaxPacketSize     0x0a58  2x 600 bytes
+        bInterval               1
+    Interface Descriptor:
+      bLength                 9
+      bDescriptorType         4
+      bInterfaceNumber        1
+      bAlternateSetting      10
+      bNumEndpoints           1
+      bInterfaceClass        14 Video
+      bInterfaceSubClass      2 Video Streaming
+      bInterfaceProtocol      0 
+      iInterface              0 
+      Endpoint Descriptor:
+        bLength                 7
+        bDescriptorType         5
+        bEndpointAddress     0x81  EP 1 IN
+        bmAttributes            5
+          Transfer Type            Isochronous
+          Synch Type               Asynchronous
+          Usage Type               Data
+        wMaxPacketSize     0x0b00  2x 768 bytes
+        bInterval               1
+    Interface Descriptor:
+      bLength                 9
+      bDescriptorType         4
+      bInterfaceNumber        1
+      bAlternateSetting      11
+      bNumEndpoints           1
+      bInterfaceClass        14 Video
+      bInterfaceSubClass      2 Video Streaming
+      bInterfaceProtocol      0 
+      iInterface              0 
+      Endpoint Descriptor:
+        bLength                 7
+        bDescriptorType         5
+        bEndpointAddress     0x81  EP 1 IN
+        bmAttributes            5
+          Transfer Type            Isochronous
+          Synch Type               Asynchronous
+          Usage Type               Data
+        wMaxPacketSize     0x1334  3x 820 bytes
+        bInterval               1
+    Interface Descriptor:
+      bLength                 9
+      bDescriptorType         4
+      bInterfaceNumber        1
+      bAlternateSetting      12
+      bNumEndpoints           1
+      bInterfaceClass        14 Video
+      bInterfaceSubClass      2 Video Streaming
+      bInterfaceProtocol      0 
+      iInterface              0 
+      Endpoint Descriptor:
+        bLength                 7
+        bDescriptorType         5
+        bEndpointAddress     0x81  EP 1 IN
+        bmAttributes            5
+          Transfer Type            Isochronous
+          Synch Type               Asynchronous
+          Usage Type               Data
+        wMaxPacketSize     0x13fc  3x 1020 bytes
+        bInterval
+-------------------------
+3-lsmod | grep video
+uvcvideo               90112  0
+videobuf2_vmalloc      16384  1 uvcvideo
+videobuf2_memops       16384  1 videobuf2_vmalloc
+videobuf2_v4l2         24576  1 uvcvideo
+videobuf2_core         45056  2 uvcvideo,videobuf2_v4l2
+videodev              184320  3 uvcvideo,videobuf2_core,videobuf2_v4l2
+media                  32768  2 uvcvideo,videodev
+-----------------------
+4-ls /dev/vid*
+/dev/video0
+------------------
+5-ls /dev/snd/controlC*
+/dev/snd/controlC0
+---------------
+6-apt-cache search v4l2
+fswebcam - Tiny and flexible webcam program
+gem-plugin-v4l2 - Graphics Environment for Multimedia - V4L2 output support
+kradio4 - comfortable radio application for KDE
+libomxil-bellagio0-components-videosrc - V4L2 video source components for Bellagio OpenMAX IL
+libpt2.10.11 - Portable Tools Library
+libpt2.4.5 - Portable Tools Library
+libv4l-0 - Collection of video4linux support libraries
+libv4l-dev - Collection of video4linux support libraries (development files)
+libv4l2rds0 - Video4Linux Radio Data System (RDS) decoding library
+libvideo-ivtv-perl - Perl extension for using V4l2 in the ivtv perl scripts
+libwebcam0 - Webcam Library
+libwebcam0-dbg - Debug Symbols for the Webcam Library
+libwebcam0-dev - Webcam Library - Development files
+libzvbi-common - Vertical Blanking Interval decoder (VBI) - common files
+libzvbi-dev - Vertical Blanking Interval decoder (VBI) - development files
+libzvbi-doc - Vertical Blanking Interval decoder (VBI) - documentation files
+libzvbi0 - Vertical Blanking Interval decoder (VBI) - runtime files
+qv4l2 - Graphical Qt v4l2 control panel
+uvcdynctrl - Command line tool to control v4l2 devices
+uvcdynctrl-data - Command line tool to control v4l2 devices - data files
+uvcdynctrl-dbg - Debug Symbols for uvcdynctrl
+v4l-utils - Collection of command line video4linux utilities
+v4l2loopback-dkms - Source for the v4l2loopback driver (DKMS)
+v4l2loopback-source - Source for the v4l2loopback driver
+v4l2loopback-utils - Commandline utilities for the for the v4l2-loopback module
+v4l2ucp - Video for Linux 2 Universal Control Panel
+------------------
+7-sudo apt install fswebcam libv4l-dev v4l-utils view libav-tools
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+v4l-utils is already the newest version (1.12.3-1).
+The following additional packages will be installed:
+  ffmpeg libavdevice57 libsdl2-2.0-0
+Suggested packages:
+  ffmpeg-doc
+The following NEW packages will be installed:
+  ffmpeg fswebcam libav-tools libavdevice57 libsdl2-2.0-0 libv4l-dev
+0 upgraded, 6 newly installed, 0 to remove and 41 not upgraded.
+Need to get 2,131 kB of archives.
+After this operation, 3,991 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://archive.raspberrypi.org/debian stretch/main armhf libavdevice57 armhf 7:3.2.10-1~deb9u1+rpt1 [109 kB] 
+Get:5 http://archive.raspberrypi.org/debian stretch/main armhf ffmpeg armhf 7:3.2.10-1~deb9u1+rpt1 [1,516 kB]                                       
+Get:2 http://mirror.ossplanet.net/raspbian/raspbian stretch/main armhf libsdl2-2.0-0 armhf 2.0.5+dfsg1-2 [314 kB]
+Get:3 http://mirror.ossplanet.net/raspbian/raspbian stretch/main armhf fswebcam armhf 20140113-1 [44.0 kB]
+Get:4 http://mirror.ossplanet.net/raspbian/raspbian stretch/main armhf libv4l-dev armhf 1.12.3-1 [92.9 kB]
+Get:6 http://archive.raspberrypi.org/debian stretch/main armhf libav-tools all 7:3.2.10-1~deb9u1+rpt1 [55.7 kB]                                                  
+Fetched 2,131 kB in 1min 19s (26.9 kB/s)                                                                                                                         
+Selecting previously unselected package libsdl2-2.0-0:armhf.
+(Reading database ... 124722 files and directories currently installed.)
+Preparing to unpack .../0-libsdl2-2.0-0_2.0.5+dfsg1-2_armhf.deb ...
+Unpacking libsdl2-2.0-0:armhf (2.0.5+dfsg1-2) ...
+Selecting previously unselected package libavdevice57:armhf.
+Preparing to unpack .../1-libavdevice57_7%3a3.2.10-1~deb9u1+rpt1_armhf.deb ...
+Unpacking libavdevice57:armhf (7:3.2.10-1~deb9u1+rpt1) ...
+Selecting previously unselected package ffmpeg.
+Preparing to unpack .../2-ffmpeg_7%3a3.2.10-1~deb9u1+rpt1_armhf.deb ...
+Unpacking ffmpeg (7:3.2.10-1~deb9u1+rpt1) ...
+Selecting previously unselected package fswebcam.
+Preparing to unpack .../3-fswebcam_20140113-1_armhf.deb ...
+Unpacking fswebcam (20140113-1) ...
+Selecting previously unselected package libv4l-dev:armhf.
+Preparing to unpack .../4-libv4l-dev_1.12.3-1_armhf.deb ...
+Unpacking libv4l-dev:armhf (1.12.3-1) ...
+Selecting previously unselected package libav-tools.
+Preparing to unpack .../5-libav-tools_7%3a3.2.10-1~deb9u1+rpt1_all.deb ...
+Unpacking libav-tools (7:3.2.10-1~deb9u1+rpt1) ...
+Setting up fswebcam (20140113-1) ...
+Processing triggers for libc-bin (2.24-11+deb9u3) ...
+Setting up libsdl2-2.0-0:armhf (2.0.5+dfsg1-2) ...
+Processing triggers for man-db (2.7.6.1-2) ...
+Setting up libv4l-dev:armhf (1.12.3-1) ...
+Setting up libavdevice57:armhf (7:3.2.10-1~deb9u1+rpt1) ...
+Setting up ffmpeg (7:3.2.10-1~deb9u1+rpt1) ...
+Setting up libav-tools (7:3.2.10-1~deb9u1+rpt1) ...
+Processing triggers for libc-bin (2.24-11+deb9u3) ...
+----------------------
+8-nano fswebcam.conf
+write below in file
+device /dev/video0
+input 0
+resolution 1280x720
+bottom-banner
+font /usr/share/fonts/truetype/ttf-dejavu/DejaVuSans.ttf
+title "Exploring Raspberry Pi"
+timestamp "%H:%M:%S %d/%m/%Y (%Z)"
+png 0
+save testwebcam.png
+9-fswebcam -c fswebcam.conf
+--- Opening /dev/video0...
+Trying source module v4l2...
+/dev/video0 opened.
+Adjusting resolution from 1280x720 to 640x480.
+--- Capturing frame...
+Captured frame in 0.00 seconds.
+--- Processing captured image...
+Putting banner at the bottom.
+Setting font to /usr/share/fonts/truetype/ttf-dejavu/DejaVuSans.ttf.
+Setting title "Exploring Raspberry Pi".
+Setting timestamp "%H:%M:%S %d/%m/%Y (%Z)".
+Setting output format to PNG, quality 0
+Writing PNG image to 'testwebcam.png'.
+-------------------
+10-gpicview testwebcam.png
+show to us picture
+--------------------
+11-sudo apt-get install cheese
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  cheese-common gnome-user-guide gnome-video-effects gstreamer1.0-clutter-3.0 libcheese-gtk25
+  libcheese8 libclutter-1.0-0 libclutter-1.0-common libclutter-gst-3.0-0 libclutter-gtk-1.0-0
+  libcogl-common libcogl-pango20 libcogl-path20 libcogl20 libyelp0 yelp yelp-xsl
+Suggested packages:
+  gnome-video-effects-frei0r
+The following NEW packages will be installed:
+  cheese cheese-common gnome-user-guide gnome-video-effects gstreamer1.0-clutter-3.0 libcheese-gtk25
+  libcheese8 libclutter-1.0-0 libclutter-1.0-common libclutter-gst-3.0-0 libclutter-gtk-1.0-0
+  libcogl-common libcogl-pango20 libcogl-path20 libcogl20 libyelp0 yelp yelp-xsl
+0 upgraded, 18 newly installed, 0 to remove and 41 not upgraded.
+Need to get 14.2 MB/16.8 MB of archives.
+After this operation, 64.7 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://mirror.ossplanet.net/raspbian/raspbian stretch/main armhf gnome-video-effects all 0.4.1-3 [61.6 kB]
+Get:2 http://mirror.ossplanet.net/raspbian/raspbian stretch/main armhf cheese armhf 3.22.1-1 [345 kB] 
+Get:3 http://mirror.ossplanet.net/raspbian/raspbian stretch/main armhf libyelp0 armhf 3.22.0-1 [152 kB]
+Get:4 http://mirror.ossplanet.net/raspbian/raspbian stretch/main armhf yelp-xsl all 3.20.1-2 [474 kB] 
+Get:5 http://mirror.ossplanet.net/raspbian/raspbian stretch/main armhf yelp armhf 3.22.0-1 [778 kB]   
+Get:6 http://mirror.ossplanet.net/raspbian/raspbian stretch/main armhf gnome-user-guide all 3.22.0-1 [11.7 MB]      
+Get:7 http://mirror.ossplanet.net/raspbian/raspbian stretch/main armhf libclutter-1.0-common all 1.26.0+dfsg-3+rpi1 [462 kB]
+Get:8 http://mirror.ossplanet.net/raspbian/raspbian stretch/main armhf libcogl-common all 1.22.2-2+rpi1 [244 kB]    
+Fetched 14.2 MB in 1min 58s (120 kB/s)                                                                              
+Selecting previously unselected package libcogl20:armhf.
+(Reading database ... 124808 files and directories currently installed.)
+Preparing to unpack .../00-libcogl20_1.22.2-2+rpi1_armhf.deb ...
+Unpacking libcogl20:armhf (1.22.2-2+rpi1) ...
+Selecting previously unselected package libcogl-pango20:armhf.
+Preparing to unpack .../01-libcogl-pango20_1.22.2-2+rpi1_armhf.deb ...
+Unpacking libcogl-pango20:armhf (1.22.2-2+rpi1) ...
+Selecting previously unselected package libcogl-path20:armhf.
+Preparing to unpack .../02-libcogl-path20_1.22.2-2+rpi1_armhf.deb ...
+Unpacking libcogl-path20:armhf (1.22.2-2+rpi1) ...
+Selecting previously unselected package libclutter-1.0-0:armhf.
+Preparing to unpack .../03-libclutter-1.0-0_1.26.0+dfsg-3+rpi1_armhf.deb ...
+Unpacking libclutter-1.0-0:armhf (1.26.0+dfsg-3+rpi1) ...
+Selecting previously unselected package libclutter-gst-3.0-0:armhf.
+Preparing to unpack .../04-libclutter-gst-3.0-0_3.0.24-1_armhf.deb ...
+Unpacking libclutter-gst-3.0-0:armhf (3.0.24-1) ...
+Selecting previously unselected package cheese-common.
+Preparing to unpack .../05-cheese-common_3.22.1-1_all.deb ...
+Unpacking cheese-common (3.22.1-1) ...
+Selecting previously unselected package libcheese8:armhf.
+Preparing to unpack .../06-libcheese8_3.22.1-1_armhf.deb ...
+Unpacking libcheese8:armhf (3.22.1-1) ...
+Selecting previously unselected package libclutter-gtk-1.0-0:armhf.
+Preparing to unpack .../07-libclutter-gtk-1.0-0_1.8.2-2_armhf.deb ...
+Unpacking libclutter-gtk-1.0-0:armhf (1.8.2-2) ...
+Selecting previously unselected package gstreamer1.0-clutter-3.0.
+Preparing to unpack .../08-gstreamer1.0-clutter-3.0_3.0.24-1_armhf.deb ...
+Unpacking gstreamer1.0-clutter-3.0 (3.0.24-1) ...
+Selecting previously unselected package libcheese-gtk25:armhf.
+Preparing to unpack .../09-libcheese-gtk25_3.22.1-1_armhf.deb ...
+Unpacking libcheese-gtk25:armhf (3.22.1-1) ...
+Selecting previously unselected package gnome-video-effects.
+Preparing to unpack .../10-gnome-video-effects_0.4.1-3_all.deb ...
+Unpacking gnome-video-effects (0.4.1-3) ...
+Selecting previously unselected package cheese.
+Preparing to unpack .../11-cheese_3.22.1-1_armhf.deb ...
+Unpacking cheese (3.22.1-1) ...
+Selecting previously unselected package libyelp0:armhf.
+Preparing to unpack .../12-libyelp0_3.22.0-1_armhf.deb ...
+Unpacking libyelp0:armhf (3.22.0-1) ...
+Selecting previously unselected package yelp-xsl.
+Preparing to unpack .../13-yelp-xsl_3.20.1-2_all.deb ...
+Unpacking yelp-xsl (3.20.1-2) ...
+Selecting previously unselected package yelp.
+Preparing to unpack .../14-yelp_3.22.0-1_armhf.deb ...
+Unpacking yelp (3.22.0-1) ...
+Selecting previously unselected package gnome-user-guide.
+Preparing to unpack .../15-gnome-user-guide_3.22.0-1_all.deb ...
+Unpacking gnome-user-guide (3.22.0-1) ...
+Selecting previously unselected package libclutter-1.0-common.
+Preparing to unpack .../16-libclutter-1.0-common_1.26.0+dfsg-3+rpi1_all.deb ...
+Unpacking libclutter-1.0-common (1.26.0+dfsg-3+rpi1) ...
+Selecting previously unselected package libcogl-common.
+Preparing to unpack .../17-libcogl-common_1.22.2-2+rpi1_all.deb ...
+Unpacking libcogl-common (1.22.2-2+rpi1) ...
+Setting up libcogl-common (1.22.2-2+rpi1) ...
+Processing triggers for mime-support (3.60) ...
+Setting up cheese-common (3.22.1-1) ...
+Processing triggers for desktop-file-utils (0.23-1) ...
+Setting up libcogl20:armhf (1.22.2-2+rpi1) ...
+Processing triggers for libglib2.0-0:armhf (2.50.3-2) ...
+Setting up gnome-video-effects (0.4.1-3) ...
+Setting up libclutter-1.0-common (1.26.0+dfsg-3+rpi1) ...
+Setting up libyelp0:armhf (3.22.0-1) ...
+Processing triggers for libc-bin (2.24-11+deb9u3) ...
+Setting up libcogl-pango20:armhf (1.22.2-2+rpi1) ...
+Processing triggers for man-db (2.7.6.1-2) ...
+Setting up yelp-xsl (3.20.1-2) ...
+Processing triggers for gnome-menus (3.13.3-9) ...
+Setting up yelp (3.22.0-1) ...
+Processing triggers for hicolor-icon-theme (0.15-1) ...
+Setting up libcogl-path20:armhf (1.22.2-2+rpi1) ...
+Setting up gnome-user-guide (3.22.0-1) ...
+Setting up libclutter-1.0-0:armhf (1.26.0+dfsg-3+rpi1) ...
+Setting up libclutter-gtk-1.0-0:armhf (1.8.2-2) ...
+Setting up libclutter-gst-3.0-0:armhf (3.0.24-1) ...
+Setting up gstreamer1.0-clutter-3.0 (3.0.24-1) ...
+Setting up libcheese8:armhf (3.22.1-1) ...
+Setting up libcheese-gtk25:armhf (3.22.1-1) ...
+Setting up cheese (3.22.1-1) ...
+Processing triggers for libc-bin (2.24-11+deb9u3) ...
+−−−−−−−−−-------------
+12-v4l2-ctl --list-devices
+USB2.0 Camera: USB2.0 Camera (usb-3f980000.usb-1.4):
+	/dev/video0
+----------------------
+13-v4l2-ctl --all -d 0
+Driver Info (not using libv4l2):
+	Driver name   : uvcvideo
+	Card type     : USB2.0 Camera: USB2.0 Camera
+	Bus info      : usb-3f980000.usb-1.4
+	Driver version: 4.14.34
+	Capabilities  : 0x84200001
+		Video Capture
+		Streaming
+		Extended Pix Format
+		Device Capabilities
+	Device Caps   : 0x04200001
+		Video Capture
+		Streaming
+		Extended Pix Format
+Priority: 2
+Video input : 0 (Camera 1: ok)
+Format Video Capture:
+	Width/Height      : 640/480
+	Pixel Format      : 'YUYV'
+	Field             : None
+	Bytes per Line    : 1280
+	Size Image        : 614400
+	Colorspace        : sRGB
+	Transfer Function : Default
+	YCbCr/HSV Encoding: Default
+	Quantization      : Default
+	Flags             : 
+Crop Capability Video Capture:
+	Bounds      : Left 0, Top 0, Width 640, Height 480
+	Default     : Left 0, Top 0, Width 640, Height 480
+	Pixel Aspect: 1/1
+Selection: crop_default, Left 0, Top 0, Width 640, Height 480
+Selection: crop_bounds, Left 0, Top 0, Width 640, Height 480
+Streaming Parameters Video Capture:
+	Capabilities     : timeperframe
+	Frames per second: 30.000 (30/1)
+	Read buffers     : 0
+                     brightness (int)    : min=-127 max=127 step=1 default=-8193 value=0
+                       contrast (int)    : min=0 max=127 step=1 default=57343 value=64
+                     saturation (int)    : min=0 max=255 step=1 default=57343 value=64
+                            hue (int)    : min=-16000 max=16000 step=1 default=-8193 value=0
+ white_balance_temperature_auto (bool)   : default=1 value=1
+                          gamma (int)    : min=16 max=500 step=1 default=57343 value=100
+           power_line_frequency (menu)   : min=0 max=2 default=1 value=1
+      white_balance_temperature (int)    : min=2800 max=6500 step=1 default=57343 value=5200 flags=inactive
+                      sharpness (int)    : min=0 max=10 step=1 default=57343 value=6
+                  exposure_auto (menu)   : min=0 max=3 default=0 value=3
+              exposure_absolute (int)    : min=1 max=2500 step=1 default=625 value=625 flags=inactive
+         exposure_auto_priority (bool)   : default=0 value=1
+---------------------
+14-v4l2-ctl --list-formats -d 0
+ioctl: VIDIOC_ENUM_FMT
+	Index       : 0
+	Type        : Video Capture
+	Pixel Format: 'YUYV'
+	Name        : YUYV 4:2:2
+---------------------
+15-v4l2-ctl --list-ctrls -d 0
+  brightness (int)    : min=-127 max=127 step=1 default=-8193 value=0
+                       contrast (int)    : min=0 max=127 step=1 default=57343 value=64
+                     saturation (int)    : min=0 max=255 step=1 default=57343 value=64
+                            hue (int)    : min=-16000 max=16000 step=1 default=-8193 value=0
+ white_balance_temperature_auto (bool)   : default=1 value=1
+                          gamma (int)    : min=16 max=500 step=1 default=57343 value=100
+           power_line_frequency (menu)   : min=0 max=2 default=1 value=1
+      white_balance_temperature (int)    : min=2800 max=6500 step=1 default=57343 value=5200 flags=inactive
+                      sharpness (int)    : min=0 max=10 step=1 default=57343 value=6
+                  exposure_auto (menu)   : min=0 max=3 default=0 value=3
+              exposure_absolute (int)    : min=1 max=2500 step=1 default=625 value=625 flags=inactive
+         exposure_auto_priority (bool)   : default=0 value=1
+---------------------------
+16-v4l2-ctl --set-ctrl=brightness=100 -d 0
+change brightness
+-------------------------
+17-v4l2-ctl --list-ctrls -d 0 | grep brightness
+brightness (int)    : min=-127 max=127 step=1 default=-8193 value=100
+-------------------------
+18-gcc -O2 -Wall `pkg-config --cflags --libs libv4l2` grabber.c -o grabber
+make grabber object file
+---------------------------------
+19-gcc -O2 -Wall `pkg-config --cflags --libs libv4l2` capture.c -o capture
+make capture object file
+--------------------------------
+20-./grabber
+run object file and take a picture
+--------------------
+21-ls *.ppm
+grabber000.ppm  grabber003.ppm  grabber006.ppm  grabber009.ppm  grabber012.ppm  grabber015.ppm  grabber018.ppm
+grabber001.ppm  grabber004.ppm  grabber007.ppm  grabber010.ppm  grabber013.ppm  grabber016.ppm  grabber019.ppm
+grabber002.ppm  grabber005.ppm  grabber008.ppm  grabber011.ppm  grabber014.ppm  grabber017.ppm
+----------------
+22-gpicview grabber000.ppm
+show pictures to us
+-------------------
+23-./capture -h
+Usage: ./capture [options]
+
+Version 1.3
+Options:
+-d | --device name   Video device name [/dev/video0]
+-h | --help          Print this message
+-m | --mmap          Use memory mapped buffers [default]
+-r | --read          Use read() calls
+-u | --userp         Use application allocated buffers
+-o | --output        Outputs stream to stdout
+-f | --format        Force format to 640x480 YUYV
+-F | --formatH264    Force format to 1920x1080 H264
+-c | --count         Number of frames to grab [100] - use 0 for infinite
+
+Example usage: capture -F -o -c 300 > output.raw
+Captures 300 frames of H264 at 1920x1080 - use raw2mpg4 script to convert to mpg4
+-----------------------
+24-./capture -d /dev/video0 -o -c 100 > output2.raw
+Force Format 0
+....................................................................................................
+----------------------
+24-avconv -f mjpeg -i output2.raw output2.mp4
+convert video
+-------------------------------
+24-sudo apt install libopencv-dev
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+libopencv-dev is already the newest version (2.4.9.1+dfsg1-2).
+0 upgraded, 0 newly installed, 0 to remove and 41 not upgraded.
+---------------
+25-sudo apt install libopencv-dev
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+libopencv-dev is already the newest version (2.4.9.1+dfsg1-2).
+0 upgraded, 0 newly installed, 0 to remove and 41 not upgraded.
+----------------
+26-sudo apt install libboost-all-dev
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+libboost-all-dev is already the newest version (1.62.0.1+b4).
+0 upgraded, 0 newly installed, 0 to remove and 41 not upgraded.
+-------------------------
+27- sudo apt install mplayer alsa-utils libav-tools
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+alsa-utils is already the newest version (1.1.3-1).
+mplayer is already the newest version (2:1.3.0-6).
+libav-tools is already the newest version (7:3.2.10-1~deb9u1+rpt1).
+0 upgraded, 0 newly installed, 0 to remove and 41 not upgraded.
+--------------------------
+28-sudo apt install lame
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+lame is already the newest version (3.99.5+repack1-9).
+0 upgraded, 0 newly installed, 0 to remove and 41 not upgraded.
+--------------------
+29-cat /proc/asound/pcm
+00-00: bcm2835 ALSA : bcm2835 ALSA : playback 7
+00-01: bcm2835 ALSA : bcm2835 IEC958/HDMI : playback 1
+-------------------------
+30-aplay -l
+**** List of PLAYBACK Hardware Devices ****
+card 0: ALSA [bcm2835 ALSA], device 0: bcm2835 ALSA [bcm2835 ALSA]
+  Subdevices: 7/7
+  Subdevice #0: subdevice #0
+  Subdevice #1: subdevice #1
+  Subdevice #2: subdevice #2
+  Subdevice #3: subdevice #3
+  Subdevice #4: subdevice #4
+  Subdevice #5: subdevice #5
+  Subdevice #6: subdevice #6
+card 0: ALSA [bcm2835 ALSA], device 1: bcm2835 ALSA [bcm2835 IEC958/HDMI]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+----------------------
+31-amixer -c 0
+Simple mixer control 'PCM',0
+  Capabilities: pvolume pvolume-joined pswitch pswitch-joined
+  Playback channels: Mono
+  Limits: Playback -10239 - 400
+  Mono: Playback -2000 [77%] [-20.00dB] [on]
+----------------------
+32-amixer -c 0 controls
+numid=3,iface=MIXER,name='PCM Playback Route'
+numid=2,iface=MIXER,name='PCM Playback Switch'
+numid=1,iface=MIXER,name='PCM Playback Volume'
+numid=5,iface=PCM,name='IEC958 Playback Con Mask'
+numid=4,iface=PCM,name='IEC958 Playback Default'
+-------------------
+33-amixer -c 0 cset iface=MIXER,name='Speaker Playback Volume' 10,10
+amixer: Cannot find the given element from control hw:0
+--------------------------
+34-mplayer -ao alsa:device=hw=0 320sample.mp3
+Playing 320sample.mp3.
+libavformat version 57.56.101 (external)
+Mismatching header version 57.56.100
+Audio only file format detected.
+Load subtitles in ./
+==========================================================================
+Opening audio decoder: [mpg123] MPEG 1.0/2.0/2.5 layers I, II, III
+AUDIO: 44100 Hz, 2 ch, s16le, 320.0 kbit/22.68% (ratio: 40000->176400)
+Selected audio codec: [mpg123] afm: mpg123 (MPEG 1.0/2.0/2.5 layers I, II, III)
+==========================================================================
+AO: [alsa] 44100Hz 2ch s16le (2 bytes per sample)
+Video: no video
+Starting playback...
+A:  20.4 (20.4) of 20.0 (20.0)  3.2% 
+-------------------------
+34- aplay -D plughw:0,1 cheering.wav
+Playing WAVE 'cheering.wav' : Unsigned 8 bit, Rate 11025 Hz, Mono
+-------------------------------
+35-mplayer -ao alsa:device=hw=0 http://178.18.137.246:80
+Name   : Pinguin Radio
+Genre  : Alternative
+Website: http://www.pinguinradio.com
+Public : yes
+Bitrate: 320kbit/s
+Cache size set to 320 KBytes
+Cache fill:  0.00% (0 bytes)   
+ICY Info: StreamTitle='Dream Wife  - Hey Heartbreaker ';StreamUrl='http://www.pinguinradio.com';
+Cache fill: 15.00% (49152 bytes)   
+
+Audio only file format detected.
+==========================================================================
+Opening audio decoder: [mpg123] MPEG 1.0/2.0/2.5 layers I, II, III
+AUDIO: 44100 Hz, 2 ch, s16le, 320.0 kbit/22.68% (ratio: 40000->176400)
+Selected audio codec: [mpg123] afm: mpg123 (MPEG 1.0/2.0/2.5 layers I, II, III)
+==========================================================================
+AO: [alsa] 44100Hz 2ch s16le (2 bytes per sample)
+Video: no video
+Starting playback...
+A:   4.4 (04.3) of -0.0 (unknown)  3.4% 0% 
+--------------------------------------
+36-mplayer -ao alsa:device=hw=1 http://178.18.137.246:80
+MPlayer 1.3.0 (Debian), built with gcc-6.2.1 (C) 2000-2016 MPlayer Team
+do_connect: could not connect to socket
+connect: No such file or directory
+Failed to open LIRC support. You will not be able to use your remote control.
+
+Playing http://178.18.137.246:80.
+Resolving 178.18.137.246 for AF_INET6...
+
+Couldn't resolve name for AF_INET6: 178.18.137.246
+Connecting to server 178.18.137.246[178.18.137.246]: 80...
+
+Name   : Pinguin Radio
+Genre  : Alternative
+Website: http://www.pinguinradio.com
+Public : yes
+Bitrate: 320kbit/s
+Cache size set to 320 KBytes
+Cache fill:  0.00% (0 bytes)   
+ICY Info: StreamTitle='Hatchie  - Sure ';StreamUrl='http://www.pinguinradio.com';
+Cache fill:  5.00% (16384 bytes)   
+
+Audio only file format detected.
+==========================================================================
+Opening audio decoder: [mpg123] MPEG 1.0/2.0/2.5 layers I, II, III
+AUDIO: 44100 Hz, 2 ch, s16le, 320.0 kbit/22.68% (ratio: 40000->176400)
+Selected audio codec: [mpg123] afm: mpg123 (MPEG 1.0/2.0/2.5 layers I, II, III)
+==========================================================================
+AO: [alsa] 44100Hz 2ch s16le (2 bytes per sample)
+Video: no video
+Starting playback...
+A:   1.9 (01.9) of -0.0 (unknown)  3.3% 0% 
+Cache empty, consider increasing -cache and/or -cache-min. [performance issue]
+A:   2.4 (02.4) of -0.0 (unknown) 1175.2% 0% 
+
+
+Exiting... (End of file)
+-----------------------
+37-arecord -l
+sorry i haven't still buy a audio recorder but as soon as i buy one i test this part my webcam microphone didnt work:(((.
+------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
